@@ -8,14 +8,16 @@ body {
 h1, h2 {
   color: #222;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 nav {
   background: #fff;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 nav a {
@@ -26,8 +28,9 @@ nav a {
 }
 
 .App {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .scan-form,
@@ -38,7 +41,22 @@ table {
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.scan-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.scan-form input,
+.scan-form select,
+.scan-form button {
+  flex: 1 1 200px;
+  min-width: 180px;
+  font-size: 1rem;
 }
 
 table {
@@ -59,7 +77,8 @@ td {
   text-align: center;
 }
 
-input, select {
+input,
+select {
   padding: 8px;
   margin-right: 10px;
   border: 1px solid #ccc;
@@ -74,8 +93,50 @@ button {
   color: white;
   font-weight: 600;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
   background: #008fcc;
+}
+
+.barcode-scanner {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .scan-form form,
+  .filter-bar,
+  .summary-table,
+  .defect-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .scan-form input,
+  .scan-form select,
+  .scan-form button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  table th,
+  table td {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 10px;
+  }
 }

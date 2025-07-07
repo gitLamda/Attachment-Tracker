@@ -4,6 +4,7 @@ import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { MODULES, CUSTOMERS, STORAGE_UNITS } from "../utils/constents";
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
 
+
 function ScanForm() {
   const [form, setForm] = useState({
     module: "",
