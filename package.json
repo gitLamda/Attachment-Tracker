@@ -13,6 +13,7 @@
     "firebase": "^11.10.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-qr-barcode-scanner": "^2.1.8",
     "react-router-dom": "^7.6.3",
     "recharts": "^3.0.2",
     "uuid": "^11.1.0"
